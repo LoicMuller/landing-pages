@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+:root {
+  --very-light-grayish-blue: hsl(240, 78%, 98%);
+  --light-grayish-blue: hsl(234, 14%, 74%);
+  --grayish-blue: hsl(233, 13%, 49%);
+  --dark-grayish-blue: hsl(232, 13%, 33%);
+}
+
+/* - Linear Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%) */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+  font-weight: 700;
+}
+
+body {
+  min-width: 1440px;
+  height: 100vh;
+  background-color: var(--very-light-grayish-blue);
+}
+
+.bg-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.bg-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+/* TOGGLE SWITCH */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--grayish-blue);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-color: var(--grayish-blue);
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--grayish-blue);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/* END TOGGLE SWITCH */
+
+header {
+  padding: 50px;
+  text-align: center;
+}
+
+header h1 {
+  color: var(--dark-grayish-blue);
+}
+
+.toggle-button {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.toggle-button p {
+  color: var(--light-grayish-blue);
+  font-size: 0.9rem;
+  margin: 0 30px;
+}
+
+.cards {
+  padding: 50px;
+  height: 65vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-card,
+.right-card,
+.middle-card {
+  width: 25%;
+}
+
+.left-card,
+.right-card {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 4px;
+  height: 95%;
+}
+.middle-card {
+  background-color: var(--grayish-blue);
+  border-radius: 7px;
+  padding: 35px;
+  text-align: center;
+  height: 100%;
+}
+.left-card h4,
+.right-card h4 {
+  color: var(--grayish-blue);
+}
+.middle-card h4 {
+  color: var(--very-light-grayish-blue);
+}
+.middle-card .price {
+  color: var(--very-light-grayish-blue);
+}
+.price {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  color: #333;
+}
+.price p {
+  font-size: 2rem;
+}
+.price h1 {
+  margin-left: 5px;
+  font-size: 4rem;
+}
+
+.content {
+  margin-top: 20px;
+}
+.first,
+.second,
+.third {
+  padding: 20px 0;
+  border-top: 1px solid rgb(0, 0, 0, 0.4);
+  color: var(--grayish-blue);
+}
+.third {
+  border-bottom: 1px solid rgb(0, 0, 0, 0.4);
+}
+
+.middle-card .first,
+.middle-card .second,
+.middle-card .third {
+  color: var(--very-light-grayish-blue);
+  border-top: 1px solid rgb(255, 255, 255, 0.4);
+}
+.middle-card .third {
+  border-bottom: 1px solid rgb(255, 255, 255, 0.4);
+}
+
+.middle-card button {
+  color: var(--grayish-blue);
+  background-color: var(--very-light-grayish-blue);
+}
+
+.left-card button,
+.right-card button {
+  color: #fff;
+  background-color: var(--grayish-blue);
+}
+
+.left-card button,
+.right-card button,
+.middle-card button {
+  margin: 35px 0 15px 0;
+  padding: 15px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  width: 100%;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 440px) {
+  body {
+    min-width: 440px;
+  }
+  header {
+    padding: 30px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .cards {
+    flex-direction: column;
+    height: unset;
+  }
+  .left-card,
+  .right-card,
+  .middle-card {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
