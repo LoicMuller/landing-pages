@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+  --violet-color: hsl(257, 40%, 49%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--violet-color);
+  background-image: url("./images/bg-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  min-width: 1440px;
+}
+
+header {
+  padding: 50px;
+}
+
+.container {
+  display: flex;
+  padding: 50px 50px 20px 50px;
+}
+
+.left-content {
+  flex: 1;
+  padding: 50px;
+}
+.illustration-img img {
+  width: 100%;
+}
+
+.right-content {
+  flex: 1;
+  padding: 100px 50px 50px 50px;
+}
+
+.introduction-text h1 {
+  color: #fff;
+  text-transform: capitalize;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2.5rem;
+  line-height: 4rem;
+  padding-right: 150px;
+}
+.introduction-text p {
+  margin-top: 20px;
+  color: rgb(255, 255, 255, 0.8);
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5rem;
+}
+.register-btn button {
+  margin-top: 30px;
+  display: block;
+  padding: 15px;
+  width: 25%;
+  border-radius: 50px;
+  outline: none;
+  color: var(--violet-color);
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.social-media-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0px 50px 30px 0px;
+}
+.social-media-btn i {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 450px) {
+  body {
+    background-image: url("./images/bg-mobile.svg");
+    min-width: 450px;
+  }
+  header {
+    padding: 30px;
+  }
+  .logo img {
+    width: 200px;
+  }
+  .container {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px 0px 20px;
+  }
+  .left-content {
+    padding: 20px;
+  }
+  .right-content {
+    padding: 20px 0 0 0;
+  }
+  .introduction-text h1 {
+    font-size: 2rem;
+    padding-right: 0;
+    line-height: 3rem;
+  }
+  .introduction-text p {
+    margin-top: 20px;
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+  }
+  .register-btn button {
+    width: 80%;
+    margin: 30px auto;
+  }
+  .social-media-btn {
+    position: relative;
+    padding: 20px 0 10px 0;
+  }
+  .social-media-btn i {
+    margin: 5px;
+  }
+}
