@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+:root {
+  --dark-blue-auth: hsl(217, 28%, 15%);
+  --dark-blue-main-bg: hsl(218, 28%, 13%);
+  --dark-blue-footer-bg: hsl(216, 53%, 9%);
+  --dark-blue-testimonials-bg: hsl(219, 30%, 18%);
+
+  --cyan-color: hsl(176, 68%, 64%);
+  --blue-color: hsl(198, 60%, 50%);
+  --white-color: hsl(0, 0%, 100%);
+}
+
+/* FONT WEIGHT : 400 / 700 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 1440px;
+  color: var(--white-color);
+}
+
+header {
+  background-color: var(--dark-blue-auth);
+  background-image: url("./images/bg-curvy-desktop.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bottom-container {
+  background-color: var(--dark-blue-main-bg);
+}
+
+/* NAVBAR */
+
+.nav-links {
+  padding: 50px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: "Raleway", sans-serif;
+}
+
+.nav-links img {
+  cursor: pointer;
+}
+.nav-links ul {
+  display: flex;
+  list-style-type: none;
+}
+.nav-links li a {
+  color: rgb(255, 255, 255, 0.7);
+  margin: 20px;
+  text-decoration: none;
+  font-weight: 400;
+}
+.nav-links li a:hover {
+  color: var(--white-color);
+}
+
+/* END NAVBAR */
+/* --------------------------- */
+/* GET STARTED */
+
+.get-started {
+  text-align: center;
+  margin: 20px 0 150px 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.get-started h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+}
+
+.get-started p {
+  font-weight: 400;
+  margin-top: 30px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: rgb(255, 255, 255, 0.8);
+}
+
+.get-started button {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: var(--white-color);
+  font-weight: 700;
+  padding: 15px 80px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-image: linear-gradient(
+    to right,
+    hsl(176, 68%, 64%),
+    hsl(198, 60%, 64%)
+  );
+}
+
+/* END GET STARTED */
+/* --------------------------- */
+/* INFORMATIONS */
+
+.informations {
+  padding: 50px 100px;
+  display: flex;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+}
+
+.informations img {
+  padding: 20px 0;
+}
+
+.informations h3 {
+  font-weight: 700;
+  padding: 10px 0;
+}
+
+.informations p {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: var(--white-color);
+}
+
+.top-left {
+  flex: 1;
+}
+.top-right {
+  flex: 1;
+}
+.bot-left {
+  flex: 1;
+}
+.bot-right {
+  flex: 1;
+}
+
+/* END INFORMATIONS */
+/* --------------------------- */
+/* STAY PRODUCTIVE */
+
+.stay-productive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+
+  margin-top: 100px;
+}
+
+.stay-productive__text {
+  margin-left: 100px;
+}
+
+.stay-productive__text h1 {
+  line-height: 150%;
+}
+
+.stay-productive__text p {
+  font-weight: 400;
+  line-height: 150%;
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+.stay-productive__text a {
+  padding: 5px 0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: var(--cyan-color);
+  border-bottom: 1px solid var(--cyan-color);
+}
+
+/* END STAY PRODUCTIVE */
+/* --------------------------- */
+/* TESTIMONIALS */
+
+.testimonials {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 150px 100px 150px 150px;
+}
+
+.testimonials__quotes {
+  position: absolute;
+  top: -10%;
+  left: -1%;
+  z-index: 1;
+}
+
+.profile {
+  background-color: var(--dark-blue-testimonials-bg);
+  width: 100%;
+  padding: 50px 30px 30px 30px;
+  border-radius: 7px;
+  margin-right: 50px;
+  z-index: 2;
+  box-shadow: 5px 5px 14px var(--dark-blue-testimonials-bg);
+}
+
+.profile p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 150%;
+}
+
+.testimonials__info {
+  display: flex;
+  margin-top: 30px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.testimonials__info img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.testimonials__info h3 {
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin: 0;
+}
+.testimonials__info h6 {
+  margin: 5px 0;
+  color: rgb(255, 255, 255, 0.7);
+}
+
+/* END TESTIMONIALS */
+/* --------------------------- */
+/* CONTACT */
+
+.contact {
+  position: relative;
+  margin: 0 300px -100px;
+  padding: 50px;
+  background-color: var(--dark-blue-auth);
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.3);
+}
+
+.contact h1 {
+  font-weight: 700;
+  padding: 20px 0;
+}
+
+.contact p {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.contact form {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contact input {
+  width: 60%;
+  padding: 13px 30px;
+  border-radius: 50px;
+  outline: none;
+}
+
+.contact button {
+  padding: 13px 30px;
+  border-radius: 50px;
+  color: var(--white-color);
+  background-image: linear-gradient(
+    to right,
+    hsl(176, 68%, 64%),
+    hsl(198, 60%, 64%)
+  );
+  cursor: pointer;
+  outline: none;
+}
+
+/* END CONTACT */
+/* --------------------------- */
+/* FOOTER */
+
+footer {
+  background-color: var(--dark-blue-footer-bg);
+  padding: 200px 100px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+
+footer .flex {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer-section {
+  flex: 1;
+  margin-top: 20px;
+  padding: 0 10px;
+}
+
+.footer-section img {
+  margin-top: 5px;
+}
+
+.footer-section p {
+  margin: 0 0 0 10px;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding-left: 10px;
+  margin: 0;
+}
+
+.footer-section ul a {
+  color: var(--white-color);
+  display: inline-block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-section .social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  border: 1px solid var(--white-color);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+/* END FOOTER */
+/* --------------------------- */
